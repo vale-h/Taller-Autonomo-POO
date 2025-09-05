@@ -42,7 +42,7 @@ public class VeentanaSaludo {
         ventana.setVisible(true);
 
         ventana.setBackground(Color.blue);
-        botonSaludar.setBackground(Color.cyan);
+        botonSaludar.setBackground(Color.magenta);
         campoTexto.setBackground(Color.pink);
         campoTexto.setFont(new Font("Times New Roman", Font.BOLD, 20));
     }
