@@ -1,10 +1,11 @@
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.*;
 
 public class VeentanaSaludo {
     public static void main(String[] args) {
         JFrame ventana = new JFrame("App de Saludo ICC490");
-        ventana.setSize(400,200);
+        ventana.setSize(600,800);
         ventana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         ventana.setLayout(null);
 
@@ -26,5 +27,10 @@ public class VeentanaSaludo {
         ventana.add(campoTexto);
         ventana.setLocationRelativeTo(null);
         ventana.setVisible(true);
+
+        ventana.setBackground(Color.blue);
+        botonSaludar.setBackground(Color.cyan);
+        campoTexto.setBackground(Color.pink);
+        campoTexto.setFont(new Font("Times New Roman", Font.BOLD, 20));
     }
 }
