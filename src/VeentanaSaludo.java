@@ -20,8 +20,21 @@ public class VeentanaSaludo {
 
         botonSaludar.addActionListener(e -> {
             String nombre = campoTexto.getText();
-            etiquetaSaludo.setText("Hola " + nombre);
+            if ( nombre.trim () . isEmpty () ) {
+                JOptionPane.showMessageDialog (null , " Por favor ingresa tu nombre.") ;
+            } else {
+                etiquetaSaludo.setText (" Hola! " + nombre + " :)") ;
+            }
         });
+
+        campoTexto.addKeyListener(new KeyAdapter() {
+            public void keyPressed ( KeyEvent e ) {
+                if ( e . getKeyCode () == KeyEvent . VK_ENTER ) {
+                    botonSaludar . doClick () ;
+                    }
+            }
+                });
+
         ventana.add(botonSaludar);
         ventana.add(etiquetaSaludo);
         ventana.add(campoTexto);
